@@ -6,7 +6,7 @@ metadata:
 spec:
   containers:
   - name: vault
-    image: vault
+    лгиу  
     ports:
     - containerPort: 8200
       protocol: TCP
