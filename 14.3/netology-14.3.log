@@ -1,0 +1,45 @@
+nginx.conf=server {
+    listen 80;
+    server_name  netology.ru www.netology.ru;
+    access_log  /var/log/nginx/domains/netology.ru-access.log  main;
+    error_log   /var/log/nginx/domains/netology.ru-error.log info;
+    location / {
+        include proxy_params;
+        proxy_pass http://10.10.10.10:8080/;
+    }
+}
+
+KUBERNETES_SERVICE_PORT_HTTPS=443
+KUBERNETES_SERVICE_PORT=443
+HOSTNAME=netology-14.3
+SPECIAL_LEVEL_KEY=server {
+    listen 80;
+    server_name  netology.ru www.netology.ru;
+    access_log  /var/log/nginx/domains/netology.ru-access.log  main;
+    error_log   /var/log/nginx/domains/netology.ru-error.log info;
+    location / {
+        include proxy_params;
+        proxy_pass http://10.10.10.10:8080/;
+    }
+}
+
+DISTTAG=f37container
+PWD=/
+FBR=f37
+HOME=/root
+KUBERNETES_PORT_443_TCP=tcp://10.96.0.1:443
+FGC=f37
+SHLVL=1
+KUBERNETES_PORT_443_TCP_PROTO=tcp
+KUBERNETES_PORT_443_TCP_ADDR=10.96.0.1
+KUBERNETES_SERVICE_HOST=10.96.0.1
+KUBERNETES_PORT=tcp://10.96.0.1:443
+KUBERNETES_PORT_443_TCP_PORT=443
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+_=/usr/bin/env
+total 12
+drwxrwxrwx 3 root root 4096 Nov 18 08:54 .
+drwxr-xr-x 3 root root 4096 Nov 18 09:15 ..
+drwxr-xr-x 2 root root 4096 Nov 18 08:54 ..2022_11_18_08_54_19.2027163542
+lrwxrwxrwx 1 root root   32 Nov 18 08:54 ..data -> ..2022_11_18_08_54_19.2027163542
+lrwxrwxrwx 1 root root   17 Nov 18 08:54 nginx.conf -> ..data/nginx.conf
