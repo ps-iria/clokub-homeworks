@@ -1,0 +1,21 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: second
+  namespace: test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: second
+  template:
+    metadata:
+      labels:
+        app: second
+    spec:
+      containers:
+      - image: k8s.gcr.io/echoserver:1.4
+        name: hello-world
+        ports:
+        - containerPort: 8080
