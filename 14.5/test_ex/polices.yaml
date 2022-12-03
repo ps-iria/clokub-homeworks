@@ -3,7 +3,6 @@ apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
   name: first-policy
-  namespace: test
 spec:
   podSelector:
     matchLabels:
@@ -24,7 +23,6 @@ apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
   name: second-policy
-  namespace: test
 spec:
   podSelector:
     matchLabels:
