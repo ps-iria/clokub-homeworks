@@ -26,3 +26,7 @@ variable "subnet" {
   type    = string
   default = "hw15-subnet"
 }
+variable "subnet_v4_cidr_blocks" {
+  type    = list(string)
+  default = ["172.31.32.0/19"]
+}
