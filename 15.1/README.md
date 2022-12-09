@@ -7,6 +7,19 @@
 - Используя vpc-модуль terraform, создать пустую VPC с подсетью 172.31.0.0/16.
 - Выбрать регион и зону.
 
+```
+provider "yandex" {
+  token     = var.token
+  cloud_id  = var.cloud_id
+  folder_id = var.folder_id
+  zone      = var.zone
+}
+
+resource "yandex_vpc_network" "default" {
+  name = var.network
+}
+```
+
 2. Публичная сеть.
 
 - Создать в vpc subnet с названием public, сетью 172.31.32.0/19 и Internet gateway.
