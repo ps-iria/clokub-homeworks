@@ -18,6 +18,11 @@ provider "yandex" {
 resource "yandex_vpc_network" "default" {
   name = var.network
 }
+
+resource "yandex_vpc_subnet" "default" {
+  v4_cidr_blocks = var.subnet_v4_cidr_blocks
+  zone           = var.zone
+}
 ```
 
 2. Публичная сеть.

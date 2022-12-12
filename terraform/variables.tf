@@ -4,10 +4,10 @@ variable zone {
   description = "Zone"
 }
 variable public_key_path {
-  description = "Path to the public key used for ssh access"
+  description = "~/.ssh/id_rsa.pub"
 }
 variable private_key_path {
-  description = "Path to the private key used for ssh access"
+  description = "~/.ssh/id_rsa"
 }
 variable cloud_id {
   description = "cloud id"
@@ -28,5 +28,12 @@ variable "subnet" {
 }
 variable "subnet_v4_cidr_blocks" {
   type    = list(string)
-  default = ["172.31.32.0/19"]
+  default = ["172.31.0.0/16"]
+}
+variable "user" {
+  type = string
+  default = "yc-user"
+}
+variable "password" {
+  type = string
 }
